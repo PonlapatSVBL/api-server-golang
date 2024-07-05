@@ -4,6 +4,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	employeecontroller "github.com/svbl/golang-api/controller"
 	initializers "github.com/svbl/golang-api/initializers"
+	"github.com/svbl/golang-api/mockup"
 )
 
 func main() {
@@ -14,4 +15,6 @@ func main() {
 	employeecontroller.GetEmployee4()
 
 	// employeecontroller.ListEmployee()
+
+	mockup.GetBooks()
 }
