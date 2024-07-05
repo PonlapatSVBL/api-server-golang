@@ -10,7 +10,7 @@ func main() {
 	initializers.LoadEnv()
 	initializers.ConnectDb()
 
-	employeecontroller.GetEmployee3()
+	// employeecontroller.GetEmployee3()
 	employeecontroller.GetEmployee4()
 
 	// employeecontroller.ListEmployee()

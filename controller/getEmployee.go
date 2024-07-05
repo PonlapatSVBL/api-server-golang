@@ -1,6 +1,7 @@
 package employeecontroller
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"reflect"
@@ -192,12 +193,13 @@ func GetEmployee4() ([]EmployeeStruct, error) {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	values := make([]interface{}, len(columns))
-	valuePtrs := make([]interface{}, len(columns))
+	columnCount := len(columns)
 
 	for rows.Next() {
-		for i := range columns {
+		values := make([]interface{}, columnCount)
+		valuePtrs := make([]interface{}, columnCount)
+
+		for i := range values {
 			valuePtrs[i] = &values[i]
 		}
 
@@ -207,17 +209,20 @@ func GetEmployee4() ([]EmployeeStruct, error) {
 		}
 
 		var emp EmployeeStruct
+		elem := reflect.ValueOf(&emp).Elem()
+
 		for i, col := range columns {
-			val := values[i]
-			switch col {
-			case "employee_id":
-				emp.EmployeeId = string(val.([]byte)) // หรือแปลงเป็น string ตามต้องการ
-			case "employee_name":
-				emp.EmployeeName = string(val.([]byte)) // หรือแปลงเป็น string ตามต้องการ
-			case "employee_code":
-				emp.EmployeeCode = string(val.([]byte)) // หรือแปลงเป็น string ตามต้องการ
-			case "begin_dt":
-				emp.BeginDt = string(val.([]byte)) // หรือแปลงเป็น string ตามต้องการ
+			fieldName := ToCamel(col)
+			field := elem.FieldByName(fieldName)
+			if field.IsValid() {
+				switch v := values[i].(type) {
+				case []byte:
+					field.SetString(string(v))
+				case string:
+					field.SetString(v)
+				default:
+					field.SetString(fmt.Sprintf("%v", v))
+				}
 			}
 		}
 
@@ -225,7 +230,7 @@ func GetEmployee4() ([]EmployeeStruct, error) {
 	}
 
 	fmt.Println()
-	for _, emp := range employees {
+	/* for _, emp := range employees {
 		v := reflect.ValueOf(emp)
 		typeOfS := v.Type()
 
@@ -236,6 +241,13 @@ func GetEmployee4() ([]EmployeeStruct, error) {
 			}
 		}
 		fmt.Println()
+	} */
+	/* jsonBytes, _ := json.Marshal(employees)
+	fmt.Println(string(jsonBytes)) */
+	for _, emp := range employees {
+		jsonBytes, _ := json.Marshal(emp)
+		fmt.Println(string(jsonBytes))
+		fmt.Println("< ========================================================== >")
 	}
 	fmt.Println()
 

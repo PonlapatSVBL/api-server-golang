@@ -1,146 +1,146 @@
 package models
 
 type EmployeeStruct struct {
-	EmployeeId                    string
-	ApplicationId                 string
-	EmployeeCode                  string
-	FingCode                      string
-	EmployeeTypeCode              string
-	EmployeeTypeGroupId           string
-	EmployeeNickname              string
-	EmployeeNicknameEn            string
-	EmployeeName                  string
-	EmployeeLastName              string
-	EmployeeNameEn                string
-	EmployeeLastNameEn            string
-	EmployeeTitleLv               string
-	EmployeeGender                string
-	EmployeeForeigner             string
-	CountryId                     string
-	EmployeeStatus                string
-	PositionId                    string
-	CompanyId                     string
-	BranchId                      string
-	DepartmentId                  string
-	DivisionId                    string
-	SectionId                     string
-	Mobilephone                   string
-	Emailaddress                  string
-	Salary                        string
-	SalaryLaw                     string
-	SalaryPerWeek                 string
-	SalaryPerWeekTypeLv           string
-	PaymentMethod                 string
-	SocialInsuranceMethodLv       string
-	SocialInsuranceMethodConstant string
-	SocialInsuranceDeductLv       string
-	TaxMethodLv                   string
-	TaxMethodConstant             string
-	TaxMethodRate                 string
-	TaxDeductLv                   string
-	TaxStartMonth                 string
-	DaysPerMonth                  string
-	HoursPerDay                   string
-	BirthDt                       string
-	IdNo                          string
-	SsoNo                         string
-	OptCode                       string
-	PersonId                      string
-	LineUserId                    string
-	PlayerId                      string
-	AppleId                       string
-	FacebookId                    string
-	GoogleId                      string
-	LineTokenId                   string
-	LineTokenTodolistId           string
-	DeviceId                      string
-	Photograph                    string
-	CompanyPaymentAccountId       string
-	BankId                        string
-	BankBranchCode                string
-	BankAccountCode               string
-	BankOtherName                 string
-	WorkCycleIdJson               string
-	WorkCycleFormat               string
-	HolidayDayJson                string
-	HolidayFormat                 string
-	AuthFirst                     string
-	AuthSecond                    string
-	ClockInout                    string
-	TrialRange                    string
-	EffectiveDt                   string
-	BeginDt                       string
-	ContractExpireDt              string
-	RetirementYear                string
-	SignoutFlag                   string
-	SignoutRequestDt              string
-	SignoutDt                     string
-	OutDt                         string
-	SsoOutDt                      string
-	SignoutTypeFlag               string
-	SignoutRemark                 string
-	RoundMonthConfig              string
-	RoundXtraConfig               string
-	RoundOtConfig                 string
-	RoundWorktimeConfig           string
-	HolidayApplyConfig            string
-	ImportLogId                   string
-	PersonalConfig                string
-	Address                       string
-	Address1                      string
-	Address2                      string
-	Address3                      string
-	Address4                      string
-	Address5                      string
-	Address6                      string
-	Address7                      string
-	Address8                      string
-	Address9                      string
-	CountryCode                   string
-	StateCode                     string
-	DistrictCode                  string
-	SubdistrictCode               string
-	PostCode                      string
-	CurrentAddress                string
-	CurrentAddress1               string
-	CurrentAddress2               string
-	CurrentAddress3               string
-	CurrentAddress4               string
-	CurrentAddress5               string
-	CurrentAddress6               string
-	CurrentAddress7               string
-	CurrentAddress8               string
-	CurrentAddress9               string
-	CurrentCountryCode            string
-	CurrentStateCode              string
-	CurrentDistrictCode           string
-	CurrentSubdistrictCode        string
-	CurrentPostCode               string
-	HashtagDesc                   string
-	ReferenceCode1                string
-	ReferenceCode2                string
-	ReferenceCode3                string
-	ReferenceCode4                string
-	ReferenceCode5                string
-	SlipEncryption                string
-	BlacklistFlag                 string
-	MicrosoftEntraIdId            string
-	CoaAccountGroupId             string
-	OrderNo                       string
-	ServerId                      string
-	InstanceServerId              string
-	InstanceServerChannelId       string
-	PublishFlag                   string
-	ApproveFlag                   string
-	ApproveRemark                 string
-	GlobalFlag                    string
-	ReadOnlyFlag                  string
-	SysDelFlag                    string
-	RemoteIp                      string
-	LanguageCode                  string
-	CreatedBy                     string
-	Created                       string
-	LastUpdBy                     string
-	LastUpd                       string
-	SsoStartMonth                 string
+	EmployeeId                    string `json:"employee_id"`
+	ApplicationId                 string `json:"application_id"`
+	EmployeeCode                  string `json:"employee_code"`
+	FingCode                      string `json:"fing_code"`
+	EmployeeTypeCode              string `json:"employee_type_code"`
+	EmployeeTypeGroupId           string `json:"employee_type_group_id"`
+	EmployeeNickname              string `json:"employee_nickname"`
+	EmployeeNicknameEn            string `json:"employee_nickname_en"`
+	EmployeeName                  string `json:"employee_name"`
+	EmployeeLastName              string `json:"employee_last_name"`
+	EmployeeNameEn                string `json:"employee_name_en"`
+	EmployeeLastNameEn            string `json:"employee_last_name_en"`
+	EmployeeTitleLv               string `json:"employee_title_lv"`
+	EmployeeGender                string `json:"employee_gender"`
+	EmployeeForeigner             string `json:"employee_foreigner"`
+	CountryId                     string `json:"country_id"`
+	EmployeeStatus                string `json:"employee_status"`
+	PositionId                    string `json:"position_id"`
+	CompanyId                     string `json:"company_id"`
+	BranchId                      string `json:"branch_id"`
+	DepartmentId                  string `json:"department_id"`
+	DivisionId                    string `json:"division_id"`
+	SectionId                     string `json:"section_id"`
+	Mobilephone                   string `json:"mobilephone"`
+	Emailaddress                  string `json:"emailaddress"`
+	Salary                        string `json:"salary"`
+	SalaryLaw                     string `json:"salary_law"`
+	SalaryPerWeek                 string `json:"salary_per_week"`
+	SalaryPerWeekTypeLv           string `json:"salary_per_week_type_lv"`
+	PaymentMethod                 string `json:"payment_method"`
+	SocialInsuranceMethodLv       string `json:"social_insurance_method_lv"`
+	SocialInsuranceMethodConstant string `json:"social_insurance_method_constant"`
+	SocialInsuranceDeductLv       string `json:"social_insurance_deduct_lv"`
+	TaxMethodLv                   string `json:"tax_method_lv"`
+	TaxMethodConstant             string `json:"tax_method_constant"`
+	TaxMethodRate                 string `json:"tax_method_rate"`
+	TaxDeductLv                   string `json:"tax_deduct_lv"`
+	TaxStartMonth                 string `json:"tax_start_month"`
+	DaysPerMonth                  string `json:"days_per_month"`
+	HoursPerDay                   string `json:"hours_per_day"`
+	BirthDt                       string `json:"birth_dt"`
+	IdNo                          string `json:"id_no"`
+	SsoNo                         string `json:"sso_no"`
+	OptCode                       string `json:"opt_code"`
+	PersonId                      string `json:"person_id"`
+	LineUserId                    string `json:"line_user_id"`
+	PlayerId                      string `json:"player_id"`
+	AppleId                       string `json:"apple_id"`
+	FacebookId                    string `json:"facebook_id"`
+	GoogleId                      string `json:"google_id"`
+	LineTokenId                   string `json:"line_token_id"`
+	LineTokenTodolistId           string `json:"line_token_todolist_id"`
+	DeviceId                      string `json:"device_id"`
+	Photograph                    string `json:"photograph"`
+	CompanyPaymentAccountId       string `json:"company_payment_account_id"`
+	BankId                        string `json:"bank_id"`
+	BankBranchCode                string `json:"bank_branch_code"`
+	BankAccountCode               string `json:"bank_account_code"`
+	BankOtherName                 string `json:"bank_other_name"`
+	WorkCycleIdJson               string `json:"work_cycle_id_json"`
+	WorkCycleFormat               string `json:"work_cycle_format"`
+	HolidayDayJson                string `json:"holiday_day_json"`
+	HolidayFormat                 string `json:"holiday_format"`
+	AuthFirst                     string `json:"auth_first"`
+	AuthSecond                    string `json:"auth_second"`
+	ClockInout                    string `json:"clock_inout"`
+	TrialRange                    string `json:"trial_range"`
+	EffectiveDt                   string `json:"effective_dt"`
+	BeginDt                       string `json:"begin_dt"`
+	ContractExpireDt              string `json:"contract_expire_dt"`
+	RetirementYear                string `json:"retirement_year"`
+	SignoutFlag                   string `json:"signout_flag"`
+	SignoutRequestDt              string `json:"signout_request_dt"`
+	SignoutDt                     string `json:"signout_dt"`
+	OutDt                         string `json:"out_dt"`
+	SsoOutDt                      string `json:"sso_out_dt"`
+	SignoutTypeFlag               string `json:"signout_type_flag"`
+	SignoutRemark                 string `json:"signout_remark"`
+	RoundMonthConfig              string `json:"round_month_config"`
+	RoundXtraConfig               string `json:"round_xtra_config"`
+	RoundOtConfig                 string `json:"round_ot_config"`
+	RoundWorktimeConfig           string `json:"round_worktime_config"`
+	HolidayApplyConfig            string `json:"holiday_apply_config"`
+	ImportLogId                   string `json:"import_log_id"`
+	PersonalConfig                string `json:"personal_config"`
+	Address                       string `json:"address"`
+	Address1                      string `json:"address1"`
+	Address2                      string `json:"address2"`
+	Address3                      string `json:"address3"`
+	Address4                      string `json:"address4"`
+	Address5                      string `json:"address5"`
+	Address6                      string `json:"address6"`
+	Address7                      string `json:"address7"`
+	Address8                      string `json:"address8"`
+	Address9                      string `json:"address9"`
+	CountryCode                   string `json:"country_code"`
+	StateCode                     string `json:"state_code"`
+	DistrictCode                  string `json:"district_code"`
+	SubdistrictCode               string `json:"subdistrict_code"`
+	PostCode                      string `json:"post_code"`
+	CurrentAddress                string `json:"current_address"`
+	CurrentAddress1               string `json:"current_address1"`
+	CurrentAddress2               string `json:"current_address2"`
+	CurrentAddress3               string `json:"current_address3"`
+	CurrentAddress4               string `json:"current_address4"`
+	CurrentAddress5               string `json:"current_address5"`
+	CurrentAddress6               string `json:"current_address6"`
+	CurrentAddress7               string `json:"current_address7"`
+	CurrentAddress8               string `json:"current_address8"`
+	CurrentAddress9               string `json:"current_address9"`
+	CurrentCountryCode            string `json:"current_country_code"`
+	CurrentStateCode              string `json:"current_state_code"`
+	CurrentDistrictCode           string `json:"current_district_code"`
+	CurrentSubdistrictCode        string `json:"current_subdistrict_code"`
+	CurrentPostCode               string `json:"current_post_code"`
+	HashtagDesc                   string `json:"hashtag_desc"`
+	ReferenceCode1                string `json:"reference_code_1"`
+	ReferenceCode2                string `json:"reference_code_2"`
+	ReferenceCode3                string `json:"reference_code_3"`
+	ReferenceCode4                string `json:"reference_code_4"`
+	ReferenceCode5                string `json:"reference_code_5"`
+	SlipEncryption                string `json:"slip_encryption"`
+	BlacklistFlag                 string `json:"blacklist_flag"`
+	MicrosoftEntraIdId            string `json:"microsoft_entra_id_id"`
+	CoaAccountGroupId             string `json:"coa_account_group_id"`
+	OrderNo                       string `json:"order_no"`
+	ServerId                      string `json:"server_id"`
+	InstanceServerId              string `json:"instance_server_id"`
+	InstanceServerChannelId       string `json:"instance_server_channel_id"`
+	PublishFlag                   string `json:"publish_flag"`
+	ApproveFlag                   string `json:"approve_flag"`
+	ApproveRemark                 string `json:"approve_remark"`
+	GlobalFlag                    string `json:"global_flag"`
+	ReadOnlyFlag                  string `json:"read_only_flag"`
+	SysDelFlag                    string `json:"sys_del_flag"`
+	RemoteIp                      string `json:"remote_ip"`
+	LanguageCode                  string `json:"language_code"`
+	CreatedBy                     string `json:"created_by"`
+	Created                       string `json:"created"`
+	LastUpdBy                     string `json:"last_upd_by"`
+	LastUpd                       string `json:"last_upd"`
+	SsoStartMonth                 string `json:"sso_start_month"`
 }
